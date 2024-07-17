@@ -1506,7 +1506,7 @@ void wlan_cfg80211_ch_switch_notify(struct net_device *dev,
 				    struct cfg80211_chan_def *chandef,
 				    unsigned int link_id)
 {
-#if ((defined (AML_KERNEL_VERSION) && AML_KERNEL_VERSION >= 15) || LINUX_VERSION_CODE >= KERNEL_VERSION(6, 3, 0))
+#if ((defined (AML_KERNEL_VERSION) && AML_KERNEL_VERSION >= 15) || LINUX_VERSION_CODE >= KERNEL_VERSION(5, 15, 153))
 	cfg80211_ch_switch_notify(dev, chandef, link_id, 0);
 #else
 	cfg80211_ch_switch_notify(dev, chandef, link_id);
